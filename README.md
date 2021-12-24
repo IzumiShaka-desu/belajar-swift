@@ -41,24 +41,24 @@ secara default jika dijalankan dengan command 'swift run' maka script akan melak
 - variable dan const 
 untuk melakukan deklarasi variable pada swift gunakanlah keyword var dan untuk deklarasi constant value gunakanlah let
 contoh penggunaan
-```
+```swift
 var myVariable = 42
 myVariable = 50
 let myConstant = 42
 ```
 explicit type infersion, ketika mendeklarasikan variable kamu bisa menetapkan tipe data secara eksplisit sepert:
-```
+```swift
 var nama: String = "akashaka"
 var hariKe: Int = 2
 ```
 nilai sebuah variable tidak pernah secara implisit di konvert menjadi tipe data yang sesuai, jadi kamu harus secara eksplisit mengubahnya, seperti:
-```
+```swift
 let label = "The width is "
 let width = 94
 let widthLabel = label + String(width)
 ```
 kamu bisa memuat nilai dari suatu variabel menjadi string dan memuatnya kedalam suatu string dengan cara seperti
-```
+```swift
 let apples = 3
 let oranges = 5
 let appleSummary = "I have \(apples) apples."
@@ -66,7 +66,7 @@ let fruitSummary = "I have \(apples + oranges) pieces of fruit."
 ```
 
 - array dan dictionaries
-```
+```swift
 var testArray=["ayam goreng","rendang"]
 var testArrayExplicit: String =["nasi goreng","es cendol"]
 testArrayExplicit.append("ayam bakar")
@@ -78,6 +78,7 @@ var testDictExplicit["nama_lain":"shan"]
 - Control Flow
 
 Gunakan if dan switch untuk membuat kondisi, dan gunakan for-in, while, atau repeat-while untuk membuat perulangan. 
+```swift
 let individualScores = [75, 43, 103, 87, 12]
 var teamScore = 0
 for score in individualScores {
@@ -90,4 +91,25 @@ for score in individualScores {
     }
 }
 print(teamScore)
+```
+
+dalam if statement, kondisi harus berupa boolean dimana kode seperti ```if score { ... }``` akan error, bukan sebuah perbandingan implisit terhadap nol.
+
+kamu bisa menggunakan if dan let secara bersamaan pada variabel yang mungkin tidak memiliki nilai dimana berupa sebuah optional value. sebuah optional value dapat bernilai nil (dalam bahasa pemrograman lain null) yaitu sesuatu yang tidak memiliki nilai. untuk menandakan sebuah variabel adalah optional value kamu perlu menambahkan "?" setelah tipe data di deklarasikan.
+```swift
+var optionalString: String? = "Hello"
+print(optionalString == nil)
+
+var optionalName: String? = "Akashaka"
+var greeting = "Hello!"
+if let name = optionalName {
+    greeting = "Hello, \(name)"
+}
+```
+cara lain untuk memberikan nilai default pada sebuah optional value dengan menggunakan operator "??" seperti:
+```swift
+let nickname: String? = nil
+let fullName: String = "John Appleseed"
+let informalGreeting = "Hi \(nickname ?? fullName)"
+```
 
