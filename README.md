@@ -112,4 +112,20 @@ let nickname: String? = nil
 let fullName: String = "John Appleseed"
 let informalGreeting = "Hi \(nickname ?? fullName)"
 ```
+switch pada swift mendukung banyak tipe data dan berbagai jenis operator perbandingan tidak terbatas pada integer dan test kesamaan nilai
+
+```swift
+let vegetable = "red pepper"
+switch vegetable {
+    case "celery":
+        print("Add some raisins and make ants on a log.")
+    case "cucumber", "watercress":
+        print("That would make a good tea sandwich.")
+    case let x where x.hasSuffix("pepper"):
+        print("Is it a spicy \(x)?")
+    default:
+        print("Everything tastes good in soup.")
+}
+```
+
 
