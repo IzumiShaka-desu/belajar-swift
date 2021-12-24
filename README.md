@@ -37,3 +37,30 @@ lalu kita inisialisasi package executablenya
 swift package init --type executable
 ```
 secara default jika dijalankan dengan command 'swift run' maka script akan melakukan print "Hello, world!"
+
+- variable dan const 
+untuk melakukan deklarasi variable pada swift gunakanlah keyword var dan untuk deklarasi constant value gunakanlah let
+contoh penggunaan
+```
+var myVariable = 42
+myVariable = 50
+let myConstant = 42
+```
+explicit type infersion, ketika mendeklarasikan variable kamu bisa menetapkan tipe data secara eksplisit sepert:
+```
+var nama: String = "akashaka"
+var hariKe: Int = 2
+```
+nilai sebuah variable tidak pernah secara implisit di konvert menjadi tipe data yang sesuai, jadi kamu harus secara eksplisit mengubahnya, seperti:
+```
+let label = "The width is "
+let width = 94
+let widthLabel = label + String(width)
+```
+kamu bisa memuat nilai dari suatu variabel menjadi string dan memuatnya kedalam suatu string dengan cara seperti
+```
+let apples = 3
+let oranges = 5
+let appleSummary = "I have \(apples) apples."
+let fruitSummary = "I have \(apples + oranges) pieces of fruit."
+```
