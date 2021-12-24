@@ -26,3 +26,14 @@ Available completions:
 	reserveCapacity(n: Int) -> Void
 
 ```
+- inisialisasi package executeable swift
+untuk latihan pertama kita akan membuat sebuah folder bernama "Latihan" untuk package Latihan
+```
+mkdir Latihan
+cd Latihan
+```
+lalu kita inisialisasi package executablenya
+```
+swift package init --type executable
+```
+secara default jika dijalankan dengan command 'swift run' maka script akan melakukan print "Hello, world!"
