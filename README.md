@@ -127,5 +127,54 @@ switch vegetable {
         print("Everything tastes good in soup.")
 }
 ```
+for in loop
+```
+ 146> for i in 0...4{
+ 147.     print(i) 
+ 148. } 
+0
+1
+2
+3
+4
+ 149> for i in 0..<4{
+ 150.     print(i) 
+ 151. } 
+0
+1
+2
+3
 
+```
+for in loop a dictionaries
+```swift
+let interestingNumbers = [
+    "Prime": [2, 3, 5, 7, 11, 13],
+    "Fibonacci": [1, 1, 2, 3, 5, 8],
+    "Square": [1, 4, 9, 16, 25],
+]
+var largest = 0
+for (_, numbers) in interestingNumbers {
+    for number in numbers {
+        if number > largest {
+            largest = number
+        }
+    }
+}
+print(largest)
+```
+while and repeat while loop
+```swift
+var n = 2
+while n < 100 {
+    n *= 2
+}
+print(n)
+
+var m = 2
+repeat {
+    m *= 2
+} while m < 100
+print(m)
+```
 
