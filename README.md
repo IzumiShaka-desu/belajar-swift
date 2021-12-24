@@ -64,3 +64,13 @@ let oranges = 5
 let appleSummary = "I have \(apples) apples."
 let fruitSummary = "I have \(apples + oranges) pieces of fruit."
 ```
+
+- array dan dictionaries
+```
+var testArray=["ayam goreng","rendang"]
+var testArrayExplicit: String =["nasi goreng","es cendol"]
+testArrayExplicit.append("ayam bakar")
+var testDict=["nama":"akashaka","kelas":5]
+var testDictExplicit: [String:String]=["nama":"nama","kelas":"5"]
+var testDictExplicit["nama_lain":"shan"]
+```
