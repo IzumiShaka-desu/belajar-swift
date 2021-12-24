@@ -74,3 +74,20 @@ var testDict=["nama":"akashaka","kelas":5]
 var testDictExplicit: [String:String]=["nama":"nama","kelas":"5"]
 var testDictExplicit["nama_lain":"shan"]
 ```
+
+- Control Flow
+
+Gunakan if dan switch untuk membuat kondisi, dan gunakan for-in, while, atau repeat-while untuk membuat perulangan. 
+let individualScores = [75, 43, 103, 87, 12]
+var teamScore = 0
+for score in individualScores {
+    if score > 50 {
+        print("team score +3")
+        teamScore += 3
+    } else {
+        print("team score +1")
+        teamScore += 1
+    }
+}
+print(teamScore)
+
