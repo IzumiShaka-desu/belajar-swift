@@ -177,4 +177,12 @@ repeat {
 } while m < 100
 print(m)
 ```
+- function
+gunakan keyword "func" untuk mendeklarasikan sebuah function.  gunakan '->' untuk memisahkan parameter tipe keluaran function.
+```swift
+func greet(person: String, day: String) -> String {
+    return "Hello \(person), today is \(day)."
+}
+greet(person: "Minami", day: "Friday")
+```
 
