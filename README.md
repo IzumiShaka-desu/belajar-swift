@@ -185,4 +185,10 @@ func greet(person: String, day: String) -> String {
 }
 greet(person: "Minami", day: "Friday")
 ```
-
+secara default swift menerapkan "named parameter" pada parameter sebuah function dan akan menetapkan nama parameter menjadi label dari parameter yang telah dibuat, untuk membuat argument tanpa label name anda perlu menambahkan '_' sebelum sebuah parameter dan untuk membuat sebuah custom kamu hanya perlu menuliskan custom label sebelum nama parameternya ditulis. 
+```
+func greet(_ person: String,on day: String) -> String {
+    return "Hello \(person), today is \(day)."
+}
+greet("Minami", on: "Friday")
+```
