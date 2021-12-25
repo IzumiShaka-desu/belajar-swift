@@ -214,3 +214,69 @@ let statistics = calculateStatistics(scores: [5, 3, 100, 3, 9])
 print(statistics.sum)
 print(statistics.2)
 ```
+pada swift function bertipe first-class type. ini berarti function dapat mengembalikan function lain sebagai nilai kembaliannya.
+```swift
+func makeIncrementer() -> ((Int) -> Int) {
+    func addOne(number: Int) -> Int {
+        return 1 + number
+    }
+    return addOne
+}
+var increment = makeIncrementer()
+increment(7)
+```
+dan juga swift dapat membuat function lain menjadi parameter pada sebuah function
+```swift
+func hasAnyMatches(list: [Int], condition: (Int) -> Bool) -> Bool {
+    for item in list {
+        if condition(item) {
+            return true
+        }
+    }
+    return false
+}
+func lessThanTen(number: Int) -> Bool {
+    return number < 10
+}
+var numbers = [20, 19, 7, 12]
+hasAnyMatches(list: numbers, condition: lessThanTen)
+```
+```swift
+akashaka@Akashakas-MacBook-Pro belajar-swift % swift
+ 1> [1,2,3,4].map({(number:Int)->Int in 
+ 2.         var res=number*number 
+ 3.         return res 
+ 4.     })
+$R4: [Int] = 4 values {
+  [0] = 1
+  [1] = 4
+  [2] = 9
+  [3] = 16
+}
+ 5> [1,2,3,4].map({number in number*number
+ 6.     }) 
+$R5: [Int] = 4 values {
+  [0] = 1
+  [1] = 4
+  [2] = 9
+  [3] = 16
+}
+```
+penulisan singkat sintaks 
+```swift
+ 1> [1,2,3,4].sorted{(a:Int,b:Int)->Bool in return a<b}
+$R9: [Int] = 4 values {
+  [0] = 1
+  [1] = 2
+  [2] = 3
+  [3] = 4
+}
+ 2> [1,2,3,4].sorted{$1<$0} 
+$R10: [Int] = 4 values {
+  [0] = 4
+  [1] = 3
+  [2] = 2
+  [3] = 1
+}
+ 3>  
+```
