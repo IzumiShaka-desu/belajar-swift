@@ -280,3 +280,33 @@ $R10: [Int] = 4 values {
 }
  3>  
 ```
+- ## OOP SWIFT
+- ### Class
+untuk pembuatan kelas dalam swift ditandain dengan keyword "class", dan untuk pembuatan objek hanya perlu => NamaClass()
+```swift
+class Character {
+    var name: String ="no name"
+    func simpleDescription() -> String {
+        return "A Character with name \(name)."
+    }
+}
+var aChar = Character()
+aChar.name = "karin"
+var charDesc = aChar.simpleDescription()
+
+```
+hmmm aku pengen ngasih nama waktu bikin sebuah karakter gimana ya???. kita butuh initializer mungkin kamu lebih familiar sama constructor ya mereka itu sama, berguna untuk memberikan nilai awal saat objek diinisialisasikan atau saat objek tersebut dibuat.
+```swift
+class Character {
+    var name: String ="no name"
+    init(name: String){
+        self.name=name
+    }
+    func simpleDescription() -> String {
+        return "A Character with name \(name)."
+    }
+}
+var aChar = Character(name:"karin")
+var charDesc = aChar.simpleDescription()
+
+```
